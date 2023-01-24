@@ -26,25 +26,24 @@ const Navbar = () => {
       >
         <b>{"<Elv>"}</b>
       </motion.span>
-      {/* conteiner menu */}
-      <div className="flex-row-reverse flex lg:flex-row items-start  lg:items-center lg:gap-x-8 gap-x-3  ">
-        
-        <div className="mr-3  flex-col hidden   z-20 lg:flex items-center gap-3  lg:flex-row ">
+      <div className="flex items-center lg:gap-x-8  ">
+        {" "}
+        {/* todo */}
+        {/* <BsList className="lg:hidden mr-3 text-indigo-600 text-2xl" /> */}
+        <div className="mr-3   flex   z-20  items-center gap-3   capitalize">
           {itemNavbar.map(({ link, name, offset, smooth, to }, i) => (
             <Link
-              key={i}
+            key={i}
               href={link}
               to={to}
               offset={offset}
               smooth={smooth}
-              className={`${josefin.className} hover:text-indigo-800  text-indigo-600 text-base dark:text-slate-50 dark:hover:text-indigo-600 duration-300 capitalize`}
+              className={`${josefin.className} hover:text-indigo-800 hidden lg:flex text-indigo-600 text-base dark:text-slate-50 dark:hover:text-indigo-600 duration-300 capitalize`}
             >
               {name}
             </Link>
           ))}
         </div>
-        {/* boton responsive */}
-        <BsList className="lg:hidden mr-3 text-indigo-600 text-2xl" />
         <motion.div whileTap={{ scale: 1.2 }}>
           {/* modo oscuro y modo claro */}
           {!themeState ? null : customTheme === "dark" ? (

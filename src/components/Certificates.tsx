@@ -25,8 +25,9 @@ const Certificados = () => {
               key={i}
               className="border rounded-md py-5 px-2 border-slate-200 dark:border-slate-700"
             >
-              <div className="mx-2">
+              <div>
                 <Img
+                className="mx-auto"
                   src={link}
                   alt={name}
                   width={320}
@@ -34,7 +35,7 @@ const Certificados = () => {
                   priority
                 />
 
-                <div className="flex-col self-start pb-5">
+                <div className="flex-col self-center pb-5">
                   <span
                     className={`${josefin.className} flex items-start text-slate-600 dark:text-white pt-3 gap-2`}
                   >
