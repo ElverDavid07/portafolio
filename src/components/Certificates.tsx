@@ -2,7 +2,7 @@ import { Kalam, Josefin_Sans } from "@next/font/google";
 import { certificados } from "@/components/profile";
 import { RiMapPinLine } from "react-icons/ri";
 import { TbCertificate } from "react-icons/tb";
-import Img from "next/image";
+import Img from "next/legacy/image";
 
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
@@ -11,6 +11,7 @@ const Certificados = () => {
   const certificado = (pdf: string) => {
     window.open(pdf, "_blank");
   };
+
   return (
     <div id="certificates">
       <span
@@ -23,16 +24,16 @@ const Certificados = () => {
           ({ link, name, pdf, universidad, nombreDeElCertificado }, i) => (
             <div
               key={i}
-              className="border rounded-md py-5 px-2 border-slate-200 dark:border-slate-700"
+              className="border rounded-lg py-6 px-2 border-slate-200 dark:border-slate-700"
             >
               <div>
-                <Img
-                className="mx-auto"
+                <img
+                  className="lg:mx-auto w-full p-2 rounded-sm lg:pt-0"
                   src={link}
                   alt={name}
-                  width={320}
-                  height={280}
-                  priority
+                  /* width={320}
+                  height={250} */
+                  
                 />
 
                 <div className="flex-col self-center pb-5">

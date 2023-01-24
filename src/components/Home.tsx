@@ -7,7 +7,7 @@ const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 const Home = () => {
   const certificado = () => {
-    window.open("certificados/certificado.pdf", "_blank");
+    window.open("curriculum.pdf", "_blank");
   };
   return (
     <>

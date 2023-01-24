@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }:AppProps) {
       <Head>
         <meta name="description" content="portafolio de elver david peñate" />
         <link rel="icon" href="/logo.jpg"  />
-        <title>portafolio</title>
+        <title>portafolio web | elver david</title>
       </Head>
       <ThemeProvider attribute='class' enableSystem={true}>
         <NextUIProvider>

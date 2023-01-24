@@ -45,7 +45,7 @@ const Contact = () => {
         ¡Gracias por visitar mi portafolio! Si deseas ponerte en contacto
         conmigo, puedes enviarme un correo electrónico, atravez de este
         formulario o atravez de{" "}
-        <Link target={"_blank"} href="https://github.com/ElverDavid07">
+        <Link isExternal target={"_blank"} href="https://github.com/ElverDavid07" className="text-indigo-600 dark:text-indigo-500 underline">
           github
         </Link>
       </h2>
@@ -69,7 +69,7 @@ const Contact = () => {
             placeholder="nombre"
             className={`${
               errors.nombre &&
-              "focus:border-red-400 border-red-400 dark:focus:border-red-500 dark:border-red-500"
+              "focus:border-red-500 border-red-500 dark:focus:border-red-500 dark:border-red-500"
             } border-2 px-4 py-2 border-indigo-200 rounded-2xl placeholder:text-indigo-300 focus:border-indigo-600 dark:bg-white duration-500 `}
           />
           {errors.nombre && (
@@ -96,7 +96,7 @@ const Contact = () => {
             placeholder="Correo"
             className={`${
               errors.correo &&
-              "focus:border-red-400 border-red-400 dark:border-red-500 dark:focus:border-red-500"
+              "focus:border-red-500 border-red-500 dark:border-red-500 dark:focus:border-red-500"
             } border-2 dark:bg-white    placeholder:text-indigo-300 px-4 py-2 border-indigo-200 rounded-2xl focus:border-indigo-500 duration-500`}
           />
           {errors.correo?.type === "required" && (
@@ -120,18 +120,23 @@ const Contact = () => {
             Mensaje
           </label>
           <textarea
-            {...register("mensaje", { required: true })}
+            {...register("mensaje", { required: true,minLength:4 })}
             autoComplete="off"
             placeholder="Mensaje..."
             className={` ${
               errors.mensaje &&
-              "focus:border-red-400 border-red-400 dark:focus:border-red-500 dark:border-red-500"
+              "focus:border-red-500 border-red-500 dark:focus:border-red-500 dark:border-red-500"
             } border-2 px-4 py-2 border-indigo-200 rounded-2xl focus:border-indigo-600 duration-500  resize-none dark:bg-white placeholder:text-indigo-300`}
           />
-          {errors.mensaje && (
+         {errors.mensaje?.type === "required" && (
             <small className="text-red-500 pl-3 flex items-center gap-x-2 absolute top-[385px] ">
               <AiOutlineWarning className="h-4 w-4" /> el campo no puede estar
               vacio
+            </small>
+          )}
+          {errors.mensaje?.type === "minLength" && (
+            <small className="text-red-500 pl-3 flex items-center gap-x-2 absolute top-[385px] ">
+              <AiOutlineWarning className="h-4 w-4" /> el mensaje tiene que ser mayor a 4 caracteres
             </small>
           )}
           {/* ------------------ */}
