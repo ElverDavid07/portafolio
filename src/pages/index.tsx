@@ -6,6 +6,7 @@ import Certificados from "@/components/Certificates";
 import Proyectos from "@/components/Projects";
 import Contact from "@/components/Contact";
 import { ToastContainer, Zoom } from "react-toastify";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
           transition={Zoom}
         />
       </div>
+      <Footer />
     </>
   );
 };

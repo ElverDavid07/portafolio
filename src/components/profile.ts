@@ -121,14 +121,17 @@ export const proyects: project[] = [
     descripcion:
       "API de libros desarrollada usando node.js, express.js y mongodb atlas, esta API se encarga de proporcionar las funciones básicas de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de libros.",
     github: "https://github.com/ElverDavid07/backendC4G3",
-    ocultarIcon:"icon1"
+    ocultarIcon:"icon1",
+    web:"#"
   },
   {
     name: "crud con react",
     link: "/project/crud.png",
     descripcion:
       "interfaz de usuario construida con React, que permite consumir la API de libros y brinda una experiencia de usuario amigable y fácil de usar. Los usuarios podrán realizar operaciones como  agregar, editar y eliminar libros.",
-    github: "https://github.com/ElverDavid07/frondG3C4",
+    github: "https://github.com/ElverDavid07/crud-next",
+    web:"#",
+    ocultarIcon:"icon2"
   },
   {
     name: "usando api de rick y morty",

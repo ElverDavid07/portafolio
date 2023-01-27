@@ -30,7 +30,7 @@ const [loader, setLoader] = useState(false)
             >
               <div className="flex flex-col justify-center">
               {!loader && (
-                  <div className="flex justify-center mt-10 z-50">
+                  <div className="flex justify-center mt-16 z-50">
                     <BsImages className="text-8xl animate-pulse text-gray-300" />
                   </div>
                 )}

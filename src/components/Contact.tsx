@@ -45,7 +45,7 @@ const Contact = () => {
         ¡Gracias por visitar mi portafolio! Si deseas ponerte en contacto
         conmigo, puedes enviarme un correo electrónico, atravez de este
         formulario o atravez de{" "}
-        <Link isExternal target={"_blank"} href="https://github.com/ElverDavid07" className="text-indigo-600 dark:text-indigo-500 underline">
+        <Link isExternal target={"_blank"} href="https://github.com/ElverDavid07" className="text-indigo-600 dark:text-indigo-400 underline">
           github
         </Link>
       </h2>
@@ -58,7 +58,7 @@ const Contact = () => {
         >
           <label
             htmlFor="nombre"
-            className=" text-indigo-600 dark:text-indigo-500 text-lg font-semibold"
+            className=" text-indigo-600 dark:text-indigo-400 text-lg font-semibold"
           >
             Nombre
           </label>
@@ -81,7 +81,7 @@ const Contact = () => {
           {/* ------------- */}
           <label
             htmlFor="correo"
-            className=" text-indigo-600 dark:text-indigo-500 text-lg font-semibold"
+            className=" text-indigo-600 dark:text-indigo-400 text-lg font-semibold"
           >
             Correo
           </label>
@@ -115,7 +115,7 @@ const Contact = () => {
           {/* ------------- */}
           <label
             htmlFor="mensaje"
-            className=" text-indigo-600 dark:text-indigo-500 text-lg font-semibold"
+            className=" text-indigo-600 dark:text-indigo-400 text-lg font-semibold"
           >
             Mensaje
           </label>

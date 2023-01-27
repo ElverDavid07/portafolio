@@ -1,5 +1,5 @@
 import { skills } from "./profile";
-import { Tooltip } from "@nextui-org/react";
+import { Loading, Tooltip } from "@nextui-org/react";
 import { Kalam } from "@next/font/google";
 import Img from "next/legacy/image";
 import { useTheme } from "next-themes";
@@ -23,10 +23,10 @@ const Skill = () => {
         className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-y-4  justify-items-center pt-6"
         id="skills"
       >
-        {skills.map((skill, i) => (
+        {skills.map(({name,link}, i) => (
           <motion.div whileHover={{ scale: 1.1 }} key={i}>
             <Tooltip
-              content={skill.name}
+              content={name}
               color={theme === "dark" ? "default" : "invert"}
               contentColor={theme === "dark" ? "primary" : "success"}
               className="cursor-default"
@@ -34,13 +34,14 @@ const Skill = () => {
               <motion.div>
               {!loader && (
                   <div className="flex justify-center mt-10 z-50">
-                    <BsFillCircleFill className="text-6xl animate-pulse text-gray-300" />
+                    
+                    <Loading type="points" size="lg"/>
                   </div>
                 )}
                 <Img
                 onLoadingComplete={()=>setLoader(true)}
-                  src={skill.link}
-                  alt={skill.name}
+                  src={link}
+                  alt={name}
                   width={50}
                   height={50}
                   className="cursor-default"

@@ -16,7 +16,6 @@ const Proyectos = () => {
   const { theme } = useTheme();
   //skeleton
   const [loader, setLoader] = useState(false);
-  console.log(loader)
   return (
     <div id="projects">
       <Spacer y={8} />
@@ -38,7 +37,7 @@ const Proyectos = () => {
             >
               <div>
                 {!loader && (
-                  <div className="flex justify-center mt-10 z-50">
+                  <div className="flex justify-center mt-16 z-50">
                     <BsImages className="text-8xl animate-pulse text-gray-300" />
                   </div>
                 )}
@@ -48,7 +47,7 @@ const Proyectos = () => {
                   width={400}
                   height={250}
                   alt={name}
-                  className="md:mx-auto"
+                  className="mx-auto"
                 />
               </div>
               <Spacer y={1} />
@@ -58,6 +57,7 @@ const Proyectos = () => {
               <Spacer y={1} />
               <div className="flex items-center gap-x-2">
                 <Tooltip
+                aria-label="tooltip icon github"
                   content="ver codigo"
                   placement="bottomEnd"
                   contentColor={theme === "light" ? "primary" : "secondary"}
@@ -72,18 +72,19 @@ const Proyectos = () => {
                   </a>
                 </Tooltip>
                 <Tooltip
+                aria-label="tooltip icon web"
                   content="ir a la web"
                   placement="bottomEnd"
                   contentColor={theme === "light" ? "primary" : "secondary"}
                 >
                   <a
-                    id={ocultarIcon}
+                   id={ocultarIcon}
                     href={web}
-                    aria-label="website"
+                    aria-label="global"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <RiGlobalLine className="h-9 w-8 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-600  duration-500" />
+                    <RiGlobalLine aria-label="icon web" className="h-9 w-8 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-600  duration-500" />
                   </a>
                 </Tooltip>
               </div>
