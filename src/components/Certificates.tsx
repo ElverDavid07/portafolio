@@ -3,6 +3,8 @@ import { certificados } from "@/components/profile";
 import { RiMapPinLine } from "react-icons/ri";
 import { TbCertificate } from "react-icons/tb";
 import Img from "next/legacy/image";
+import { useState } from "react";
+import { BsImages } from "react-icons/bs";
 
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
@@ -11,7 +13,7 @@ const Certificados = () => {
   const certificado = (pdf: string) => {
     window.open(pdf, "_blank");
   };
-
+const [loader, setLoader] = useState(false)
   return (
     <div id="certificates">
       <span
@@ -26,13 +28,19 @@ const Certificados = () => {
               key={i}
               className="border rounded-lg py-6 px-2 border-slate-200 dark:border-slate-700"
             >
-              <div>
-                <img
-                  className="lg:mx-auto w-full p-2 rounded-sm lg:pt-0"
+              <div className="flex flex-col justify-center">
+              {!loader && (
+                  <div className="flex justify-center mt-10 z-50">
+                    <BsImages className="text-8xl animate-pulse text-gray-300" />
+                  </div>
+                )}
+                <Img
+                onLoadingComplete={()=>setLoader(true)}
+                  className="lg:mx-auto  w-full p-2 rounded-sm lg:pt-0"
                   src={link}
                   alt={name}
-                  /* width={320}
-                  height={250} */
+                  width={320}
+                  height={250}
                   
                 />
 

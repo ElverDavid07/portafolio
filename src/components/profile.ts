@@ -15,6 +15,8 @@ interface project {
   link: string;
   descripcion: string;
   github: string;
+  web?: string;
+  ocultarIcon?: string;
 }
 
 interface navbar {
@@ -119,6 +121,7 @@ export const proyects: project[] = [
     descripcion:
       "API de libros desarrollada usando node.js, express.js y mongodb atlas, esta API se encarga de proporcionar las funciones básicas de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de libros.",
     github: "https://github.com/ElverDavid07/backendC4G3",
+    ocultarIcon:"icon1"
   },
   {
     name: "crud con react",
@@ -133,6 +136,7 @@ export const proyects: project[] = [
     descripcion:
       "aplicación web que consume la API de Rick and Morty para proporcionar información sobre los personajes, episodios y eventos de la serie. La interfaz de usuario está construida con React. ",
     github: "https://github.com/ElverDavid07/RickAndMorty",
+    web: "https://rick-and-morty-kohl-one.vercel.app",
   },
 ];
 
@@ -143,41 +147,41 @@ export const itemNavbar: navbar[] = [
     to: "home",
     offset: -80,
     smooth: true,
-    name:"inicio"
+    name: "inicio",
   },
   {
     link: "#abaut",
     to: "abaut",
     offset: -30,
     smooth: true,
-    name:"sobre mi"
+    name: "sobre mi",
   },
   {
     link: "#skills",
     to: "skills",
     offset: -160,
     smooth: true,
-    name:"abilidades"
+    name: "abilidades",
   },
   {
     link: "#certificates",
     to: "certificates",
     offset: 75,
     smooth: true,
-    name:"certificados"
+    name: "certificados",
   },
   {
     link: "#projects",
     to: "projects",
     offset: -110,
     smooth: true,
-    name:"proyectos"
+    name: "proyectos",
   },
   {
     link: "#contact",
     to: "contact",
     offset: -270,
     smooth: true,
-    name:"contacto"
+    name: "contacto",
   },
 ];

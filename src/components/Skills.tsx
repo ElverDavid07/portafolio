@@ -4,10 +4,13 @@ import { Kalam } from "@next/font/google";
 import Img from "next/legacy/image";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { BsFillCircleFill } from "react-icons/bs";
 
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const Skill = () => {
   const { theme } = useTheme();
+  const [loader, setLoader] = useState(false)
 
   return (
     <>
@@ -29,7 +32,13 @@ const Skill = () => {
               className="cursor-default"
             >
               <motion.div>
+              {!loader && (
+                  <div className="flex justify-center mt-10 z-50">
+                    <BsFillCircleFill className="text-6xl animate-pulse text-gray-300" />
+                  </div>
+                )}
                 <Img
+                onLoadingComplete={()=>setLoader(true)}
                   src={skill.link}
                   alt={skill.name}
                   width={50}
