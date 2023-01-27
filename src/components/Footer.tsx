@@ -5,7 +5,7 @@ const Footer = () => {
   const year = data.getFullYear()
   return (
     <>
- <div className="flex lg:flex-row md:flex-row flex-col justify-center gap-y-5 items-center lg:justify-around md:justify-around dark:bg-gray-700 bg-slate-100 h-32">
+ <div className="flex lg:flex-row md:flex-row flex-col justify-center gap-y-5 items-center lg:justify-around md:justify-around dark:bg-gray-700 bg-slate-100 h-32 text-slate-700 font-medium">
  <span className="flex items-center gap-x-2 dark:text-white">
         <RiFlagLine className="text-lg" />
         Colombia
