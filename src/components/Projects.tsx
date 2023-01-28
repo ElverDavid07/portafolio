@@ -35,9 +35,9 @@ const Proyectos = () => {
               key={i}
               className=" py-12 px-3 rounded-lg shadow-md shadow-indigo-600/20 dark:shadow-2xl dark:shadow-indigo-500/30"
             >
-              <div>
+              <div className="relative">
                 {!loader && (
-                  <div className="flex justify-center mt-16 z-50">
+                  <div className="flex justify-center inset-16 z-50 absolute">
                     <BsImages className="text-8xl animate-pulse text-gray-300" />
                   </div>
                 )}
