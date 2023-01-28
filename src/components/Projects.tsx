@@ -2,19 +2,19 @@ import { proyects } from "@/components/profile";
 import Img from "next/legacy/image";
 import { Kalam, Josefin_Sans } from "@next/font/google";
 import { Spacer, Tooltip } from "@nextui-org/react";
-import { RiGithubFill, RiGlobalLine, RiImage2Line } from "react-icons/ri";
+import { RiGithubFill, RiGlobalLine,} from "react-icons/ri";
 import {BsImages} from 'react-icons/bs'
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-//tipografia
+//tipo de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 //-----------------
 const Proyectos = () => {
   const { theme } = useTheme();
-  //skeleton
+  //usestate
   const [loader, setLoader] = useState(false);
   return (
     <div id="projects">

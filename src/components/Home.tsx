@@ -3,10 +3,12 @@ import Img from "next/legacy/image";
 import { motion } from "framer-motion";
 import { Spacer } from "@nextui-org/react";
 
+//tipo de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 const Home = () => {
-  const certificado = () => {
+  //ver curriculum
+  const curriculum = () => {
     window.open("curriculum.pdf", "_blank");
   };
   return (
@@ -34,21 +36,16 @@ const Home = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="bg-gradient-to-r from-emerald-700 to-emerald-600  text-white font-medium   px-4 py-2 rounded-lg"
-            onClick={certificado}
+            onClick={curriculum}
           >
             curriculum
           </motion.button>
         </section>
 
         {/* imagen */}
-        <motion.div
-          className="mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2.4 }}
-        >
+        <div className="mx-auto">
           <Img src="/icon.svg" alt="icon" width={550} height={550} priority />
-        </motion.div>
+        </div>
       </div>
     </>
   );

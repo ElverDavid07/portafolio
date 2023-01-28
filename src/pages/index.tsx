@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <div className="lg:px-20 md:px-15 px-4 scroll-smooth" id="home">
+      <main className="lg:px-20 md:px-15 px-4 scroll-smooth" id="home">
         <Home />
         <Abaut />
         <Skill />
@@ -26,7 +26,7 @@ const Index = () => {
           pauseOnHover={false}
           transition={Zoom}
         />
-      </div>
+      </main>
       <Footer />
     </>
   );

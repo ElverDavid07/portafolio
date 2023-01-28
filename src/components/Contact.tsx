@@ -1,22 +1,25 @@
-import { Button, Spacer } from "@nextui-org/react";
+import { Button, Loading, Spacer } from "@nextui-org/react";
 import { Kalam, Josefin_Sans } from "@next/font/google";
 import { useForm } from "react-hook-form";
 import { AiOutlineWarning } from "react-icons/ai";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { Link } from "@nextui-org/react";
+import {useState} from 'react'
 
+//tipos de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 
 const Contact = () => {
+  //validador de el formulario
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors,isValid },
   } = useForm();
-
+  //cuando se envia el formulario
   const customSubmit = async () => {
     try {
       await emailjs.sendForm(
@@ -30,7 +33,11 @@ const Contact = () => {
     } catch (error) {
       console.log(error);
     }
+    setLoaderbtn(true)
   };
+  //usestate
+  const [loaderbtn, setLoaderbtn] = useState(true)
+ 
   return (
     <>
       <Spacer y={10} />
@@ -62,6 +69,7 @@ const Contact = () => {
           >
             Nombre
           </label>
+          {/* uso de react-hook-form para validar el formulario */}
           <input
             type="text"
             {...register("nombre", { required: true })}
@@ -141,10 +149,12 @@ const Contact = () => {
           )}
           {/* ------------------ */}
           <Button
-            type="submit"
+          onPress={()=>{(isValid === true)? setLoaderbtn(false) : ""}}
+          type="submit"
             className="bg-gradient-to-r from-emerald-800 to-emerald-600 hover:shadow-lg dark:hover:shadow-emerald-600/70 duration-1000 mt-3"
           >
-            Enviar
+            {(loaderbtn === false)? (<Loading type="points-opacity" color={"white"}/>) :"Enviar"}
+            
           </Button>
         </form>
       </div>

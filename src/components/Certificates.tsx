@@ -6,13 +6,16 @@ import Img from "next/legacy/image";
 import { useState } from "react";
 import { BsImages } from "react-icons/bs";
 
+//tipos de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
+//ver certificados
 const Certificados = () => {
   const certificado = (pdf: string) => {
     window.open(pdf, "_blank");
   };
+  //loader que se muestra mientras carga las imagenes
 const [loader, setLoader] = useState(false)
   return (
     <div id="certificates">

@@ -1,6 +1,7 @@
 import { Josefin_Sans, Kalam } from "@next/font/google";
 import Img from "next/legacy/image";
 
+//tipos de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 

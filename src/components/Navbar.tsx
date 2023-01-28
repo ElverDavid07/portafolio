@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { itemNavbar } from "@/components/profile";
 
+//tipos de letras
 const caveat = Caveat({ subsets: ["latin"], weight: "700" });
 const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 const Navbar = () => {
@@ -14,10 +15,12 @@ const Navbar = () => {
   useEffect(() => {
     setThemeState(true);
   }, []);
+  //tema claro o ascuro
   const { theme, setTheme, systemTheme } = useTheme();
   const customTheme = theme === "system" ? systemTheme : theme;
   return (
     <nav className="flex items-center justify-between px-3 bg-white dark:bg-slate-800 py-5 sticky top-0 z-20">
+      {/* logo */}
       <motion.span
         initial={{ x: -100, rotate: 360 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -27,9 +30,7 @@ const Navbar = () => {
         <b>{"<Elv>"}</b>
       </motion.span>
       <div className="flex items-center lg:gap-x-8  ">
-        {" "}
-        {/* todo */}
-        {/* <BsList className="lg:hidden mr-3 text-indigo-600 text-2xl" /> */}
+      
         <div className="mr-3   flex   z-20  items-center gap-3   capitalize">
           {itemNavbar.map(({ link, name, offset, smooth, to }, i) => (
             <Link

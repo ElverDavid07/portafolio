@@ -5,8 +5,8 @@ import Img from "next/legacy/image";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { BsFillCircleFill } from "react-icons/bs";
 
+//tipo de letra
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const Skill = () => {
   const { theme } = useTheme();
