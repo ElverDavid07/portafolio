@@ -128,7 +128,7 @@ export const proyects: project[] = [
     name: "crud con react",
     link: "/project/crud.png",
     descripcion:
-      "interfaz de usuario construida con React, que permite consumir la API de libros y brinda una experiencia de usuario amigable y fácil de usar. Los usuarios podrán realizar operaciones como  agregar, editar y eliminar libros.",
+      "Aplicación contruida con next.js, que permite consumir la API de libros y brinda una experiencia de usuario amigable y fácil de usar. Los usuarios podrán realizar operaciones como  agregar, editar y eliminar libros. Sin terminar aun...",
     github: "https://github.com/ElverDavid07/crud-next",
     web:"#",
     ocultarIcon:"icon2"

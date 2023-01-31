@@ -162,5 +162,5 @@ const Contact = () => {
     </>
   );
 };
-
+/* www.linkedin.com/in/elver-peñate */
 export default Contact;
