@@ -66,7 +66,7 @@ export const skills: skill[] = [
 export const certificados: certificate[] = [
   {
     name: "certificadoAll",
-    link: "/certificados/certificadoAll.jpg",
+    link: "/certificates/certificadoAll.jpg",
     pdf: "certificados/certificado.pdf",
     nombreDeElCertificado: "diplomado MisionTic 2022",
     universidad: "Universidad autonoma de bucaramanga",
@@ -75,7 +75,7 @@ export const certificados: certificate[] = [
   },
   {
     name: "certificado4",
-    link: "/certificados/certificadoC4.jpg",
+    link: "/certificates/certificadoC4.jpg",
     nombreDeElCertificado: "desarrollo de aplicaciones web",
     pdf: "certificados/certificadoC4.pdf",
     universidad: "Universidad autonoma de bucaramanga",
@@ -83,7 +83,7 @@ export const certificados: certificate[] = [
   },
   {
     name: "certificadoC3",
-    link: "/certificados/certificadoC3.jpg",
+    link: "/certificates/certificadoC3.jpg",
     nombreDeElCertificado: "desarrollo de software",
     pdf: "certificados/certificadoC3.pdf",
     universidad: "Universidad sergio arboleda",
