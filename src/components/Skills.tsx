@@ -1,4 +1,4 @@
-import { skills } from "./profile";
+import { skills } from "../utils/profile";
 import { Loading, Tooltip } from "@nextui-org/react";
 import { Kalam } from "@next/font/google";
 import Img from "next/legacy/image";
@@ -10,7 +10,7 @@ import { useState } from "react";
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
 const Skill = () => {
   const { theme } = useTheme();
-  const [loader, setLoader] = useState(false)
+  const [loader, setLoader] = useState(false);
 
   return (
     <>
@@ -23,7 +23,7 @@ const Skill = () => {
         className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-y-4  justify-items-center pt-6"
         id="skills"
       >
-        {skills.map(({name,link}, i) => (
+        {skills.map(({ name, link }, i) => (
           <motion.div whileHover={{ scale: 1.1 }} key={i}>
             <Tooltip
               content={name}
@@ -32,14 +32,17 @@ const Skill = () => {
               className="cursor-default"
             >
               <motion.div>
-              {!loader && (
+                {!loader && (
                   <div className="flex justify-center mt-10 z-50">
-                    
-                    <Loading type="points" size="lg"/>
+                    <Loading
+                      type="points-opacity"
+                      color={"primary"}
+                      size="lg"
+                    />
                   </div>
                 )}
                 <Img
-                onLoadingComplete={()=>setLoader(true)}
+                  onLoadingComplete={() => setLoader(true)}
                   src={link}
                   alt={name}
                   width={50}

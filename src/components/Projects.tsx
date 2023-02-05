@@ -1,4 +1,4 @@
-import { proyects } from "@/components/profile";
+import { proyects } from "utils/profile";
 import Img from "next/legacy/image";
 import { Kalam, Josefin_Sans } from "@next/font/google";
 import { Spacer, Tooltip } from "@nextui-org/react";

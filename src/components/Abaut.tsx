@@ -26,7 +26,7 @@ const Abaut = () => {
             en proyectos interesantes.
           </p>
           <Img
-            src="/computer.svg"
+            src="/icons/computer.svg"
             alt="icon computer"
             width={550}
             height={550}

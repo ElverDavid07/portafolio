@@ -9,7 +9,7 @@ const josefin = Josefin_Sans({ subsets: ["latin"], weight: "500" });
 const Home = () => {
   //ver curriculum
   const curriculum = () => {
-    window.open("curriculum.pdf", "_blank");
+    window.open("/archives/curriculum.pdf", "_blank");
   };
   return (
     <>
@@ -44,7 +44,7 @@ const Home = () => {
 
         {/* imagen */}
         <div className="mx-auto">
-          <Img src="/icon.svg" alt="icon" width={550} height={550} priority />
+          <Img src="/icons/icon.svg" alt="icon" width={550} height={550} priority />
         </div>
       </div>
     </>

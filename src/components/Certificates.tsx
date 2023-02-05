@@ -1,5 +1,5 @@
 import { Kalam, Josefin_Sans } from "@next/font/google";
-import { certificados } from "@/components/profile";
+import { certificados } from "utils/profile";
 import { RiMapPinLine } from "react-icons/ri";
 import { TbCertificate } from "react-icons/tb";
 import Img from "next/legacy/image";

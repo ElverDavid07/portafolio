@@ -1,88 +1,65 @@
-interface skill {
-  name: string;
-  link: string;
-}
-interface certificate {
-  name: string;
-  link: string;
-  pdf: string;
-  nombreDeElCertificado: string;
-  universidad: string;
-  descripcion: string;
-}
-interface project {
-  name: string;
-  link: string;
-  descripcion: string;
-  github: string;
-  web?: string;
-  ocultarIcon?: string;
-}
-
-interface navbar {
-  link: string;
-  to: string;
-  offset: number;
-  smooth: boolean;
-  name: string;
-}
+import {certificate,navbar,project,skill} from '@/interfaces/component'
 //abilidades
 export const skills: skill[] = [
   {
     name: "Html5",
-    link: "/html.svg",
+    link: "/icons/html.svg",
   },
   {
     name: "Css3",
-    link: "/css.svg",
+    link: "/icons/css.svg",
   },
   {
     name: "Javascript",
-    link: "/js.svg",
+    link: "/icons/js.svg",
   },
   {
     name: "React.js",
-    link: "/react.svg",
+    link: "/icons/react.svg",
   },
   {
     name: "Tailwind css",
-    link: "/tailwind.svg",
+    link: "/icons/tailwind.svg",
   },
   {
     name: "Node.js",
-    link: "/node.svg",
+    link: "/icons/node.svg",
   },
   {
     name: "Express.js",
-    link: "/express.png",
+    link: "/icons/express.png",
   },
   {
     name: "NextUi",
-    link: "/nextUi.png",
+    link: "/icons/nextUi.png",
   },
   {
     name: "Mongodb",
-    link: "/mongodb.svg",
+    link: "/icons/mongodb.svg",
   },
   {
     name: "Next.js",
-    link: "/next.svg",
+    link: "/icons/next.svg",
   },
   {
     name: "framer motion",
-    link: "/framer-motion.svg",
+    link: "/icons/framer-motion.svg",
   },
   {
     name: "Git",
-    link: "/git.svg",
+    link: "/icons/git.svg",
   },
   {
     name: "vite.js",
-    link: "/vitejs.svg",
+    link: "/icons/vitejs.svg",
   },
   {
     name: "postman",
-    link: "/postman.svg",
+    link: "/icons/postman.svg",
+  },
+  {
+    name: "Typescript",
+    link: "/icons/typescript.svg",
   },
 ];
 //certificados

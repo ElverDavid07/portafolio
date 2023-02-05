@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { itemNavbar } from "@/components/profile";
+import { itemNavbar } from "utils/profile";
 
 //tipos de letras
 const caveat = Caveat({ subsets: ["latin"], weight: "700" });
