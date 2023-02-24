@@ -5,7 +5,7 @@ import { AiOutlineWarning } from "react-icons/ai";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { Link } from "@nextui-org/react";
-import {useState} from 'react'
+import { useState } from "react";
 
 //tipos de letras
 const kalam = Kalam({ subsets: ["latin"], weight: "700" });
@@ -17,7 +17,7 @@ const Contact = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors,isValid },
+    formState: { errors, isValid },
   } = useForm();
   //cuando se envia el formulario
   const customSubmit = async () => {
@@ -33,11 +33,11 @@ const Contact = () => {
     } catch (error) {
       console.log(error);
     }
-    setLoaderbtn(true)
+    setLoaderbtn(true);
   };
   //usestate
-  const [loaderbtn, setLoaderbtn] = useState(true)
- 
+  const [loaderbtn, setLoaderbtn] = useState(true);
+
   return (
     <>
       <Spacer y={10} />
@@ -52,14 +52,28 @@ const Contact = () => {
         ¡Gracias por visitar mi portafolio! Si deseas ponerte en contacto
         conmigo, puedes enviarme un correo electrónico, atravez de este
         formulario o atravez de{" "}
-        <Link isExternal target={"_blank"} href="https://github.com/ElverDavid07" className="text-indigo-600 dark:text-indigo-400 underline">
-          github
+        <Link
+          isExternal
+          target={"_blank"}
+          href="https://github.com/ElverDavid07"
+          className="text-indigo-600 dark:text-indigo-400 underline"
+        >
+          Github
+        </Link>
+        <span className="mx-2">o</span>
+        <Link
+          isExternal
+          target={"_blank"}
+          href="https://www.linkedin.com/in/elver-peñate"
+          className="text-indigo-600 dark:text-indigo-400 underline"
+        >
+          Linkedin
         </Link>
       </h2>
       <Spacer y={2} />
       <div className="flex justify-center" id="contact">
         <form
-        id="formId"
+          id="formId"
           onSubmit={handleSubmit(customSubmit)}
           className="flex flex-col gap-y-5  py-10 px-5 rounded-xl border border-indigo-600 dark:border dark:border-indigo-600 dark:shadow-2xl dark:shadow-indigo-600/50 w-[370px] relative"
         >
@@ -128,7 +142,7 @@ const Contact = () => {
             Mensaje
           </label>
           <textarea
-            {...register("mensaje", { required: true,minLength:4 })}
+            {...register("mensaje", { required: true, minLength: 4 })}
             autoComplete="off"
             placeholder="Mensaje..."
             className={` ${
@@ -136,7 +150,7 @@ const Contact = () => {
               "focus:border-red-500 border-red-500 dark:focus:border-red-500 dark:border-red-500"
             } border-2 px-4 py-2 border-indigo-200 rounded-2xl focus:border-indigo-600 duration-500  resize-none dark:bg-white placeholder:text-indigo-300`}
           />
-         {errors.mensaje?.type === "required" && (
+          {errors.mensaje?.type === "required" && (
             <small className="text-red-500 pl-3 flex items-center gap-x-2 absolute top-[385px] ">
               <AiOutlineWarning className="h-4 w-4" /> el campo no puede estar
               vacio
@@ -144,17 +158,23 @@ const Contact = () => {
           )}
           {errors.mensaje?.type === "minLength" && (
             <small className="text-red-500 pl-3 flex items-center gap-x-2 absolute top-[385px] ">
-              <AiOutlineWarning className="h-4 w-4" /> el mensaje tiene que ser mayor a 4 caracteres
+              <AiOutlineWarning className="h-4 w-4" /> el mensaje tiene que ser
+              mayor a 4 caracteres
             </small>
           )}
           {/* ------------------ */}
           <Button
-          onPress={()=>{(isValid === true)? setLoaderbtn(false) : ""}}
-          type="submit"
+            onPress={() => {
+              isValid === true ? setLoaderbtn(false) : "";
+            }}
+            type="submit"
             className="bg-gradient-to-r from-emerald-800 to-emerald-600 hover:shadow-lg dark:hover:shadow-emerald-600/70 duration-1000 mt-3"
           >
-            {(loaderbtn === false)? (<Loading type="points-opacity" color={"white"}/>) :"Enviar"}
-            
+            {loaderbtn === false ? (
+              <Loading type="points-opacity" color={"white"} />
+            ) : (
+              "Enviar"
+            )}
           </Button>
         </form>
       </div>

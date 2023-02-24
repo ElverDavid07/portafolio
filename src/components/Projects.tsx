@@ -1,9 +1,9 @@
 import { proyects } from "utils/profile";
 import Img from "next/legacy/image";
 import { Kalam, Josefin_Sans } from "@next/font/google";
-import { Spacer, Tooltip } from "@nextui-org/react";
-import { RiGithubFill, RiGlobalLine,} from "react-icons/ri";
-import {BsImages} from 'react-icons/bs'
+import { Spacer, Tooltip, Badge } from "@nextui-org/react";
+import { RiGithubFill, RiGlobalLine } from "react-icons/ri";
+import { BsImages } from "react-icons/bs";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -28,13 +28,16 @@ const Proyectos = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-7 ">
         {proyects.map(
-          ({ link, name, descripcion, github, web, ocultarIcon }, i) => (
+          ({ link, name, descripcion, github, web, ocultarIcon,type,color }, i) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 1 }}
               key={i}
-              className=" py-12 px-3 rounded-lg shadow-md shadow-indigo-600/20 dark:shadow-2xl dark:shadow-indigo-500/30"
+              className=" py-12 px-3 rounded-lg relative shadow-md shadow-indigo-600/20 dark:shadow-2xl dark:shadow-indigo-500/30"
             >
+              <Badge disableOutline isSquared enableShadow color={color} className="absolute top-0 right-1">
+                {type}
+              </Badge>
               <div className="relative">
                 {!loader && (
                   <div className="flex justify-center inset-16 z-50 absolute">
@@ -57,7 +60,7 @@ const Proyectos = () => {
               <Spacer y={1} />
               <div className="flex items-center gap-x-2">
                 <Tooltip
-                aria-label="tooltip icon github"
+                  aria-label="tooltip icon github"
                   content="ver codigo"
                   placement="bottomEnd"
                   contentColor={theme === "light" ? "primary" : "secondary"}
@@ -72,19 +75,22 @@ const Proyectos = () => {
                   </a>
                 </Tooltip>
                 <Tooltip
-                aria-label="tooltip icon web"
+                  aria-label="tooltip icon web"
                   content="ir a la web"
                   placement="bottomEnd"
                   contentColor={theme === "light" ? "primary" : "secondary"}
                 >
                   <a
-                   id={ocultarIcon}
+                    id={ocultarIcon}
                     href={web}
                     aria-label="global"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <RiGlobalLine aria-label="icon web" className="h-9 w-8 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-600  duration-500" />
+                    <RiGlobalLine
+                      aria-label="icon web"
+                      className="h-9 w-8 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-600  duration-500"
+                    />
                   </a>
                 </Tooltip>
               </div>

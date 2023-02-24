@@ -99,7 +99,10 @@ export const proyects: project[] = [
       "API de libros desarrollada usando node.js, express.js y mongodb atlas, esta API se encarga de proporcionar las funciones básicas de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de libros.",
     github: "https://github.com/ElverDavid07/backendC4G3",
     ocultarIcon:"icon1",
-    web:"#"
+    web:"#",
+    type:"avanzado",
+    color:"success"
+
   },
   {
     name: "crud con react",
@@ -108,7 +111,9 @@ export const proyects: project[] = [
       "Aplicación contruida con next.js, que permite consumir la API de libros y brinda una experiencia de usuario amigable y fácil de usar. Los usuarios podrán realizar operaciones como  agregar, editar y eliminar libros. Sin terminar aun...",
     github: "https://github.com/ElverDavid07/crud-next",
     web:"#",
-    ocultarIcon:"icon2"
+    ocultarIcon:"icon2",
+    type:"intermedio",
+    color:'warning'
   },
   {
     name: "usando api de rick y morty",
@@ -117,6 +122,8 @@ export const proyects: project[] = [
       "aplicación web que consume la API de Rick and Morty para proporcionar información sobre los personajes, episodios y eventos de la serie. La interfaz de usuario está construida con React. ",
     github: "https://github.com/ElverDavid07/RickAndMorty",
     web: "https://rick-and-morty-kohl-one.vercel.app",
+    type:"basico",
+    color:"default"
   },
 ];
 

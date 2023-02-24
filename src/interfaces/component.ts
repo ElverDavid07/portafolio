@@ -17,6 +17,8 @@ export interface project {
   github: string;
   web?: string;
   ocultarIcon?: string;
+  color?:"success" | "default" | "warning"
+  type?:string
 }
 
 export interface navbar {
