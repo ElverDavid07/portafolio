@@ -14,10 +14,11 @@ export interface project {
   name: string;
   link: string;
   descripcion: string;
-  github: string;
+  github?: string;
   web?: string;
   ocultarIcon?: string;
-  color?:"success" | "default" | "warning"
+  githubId?:string
+  color?:"success" | "default" | "warning" | "primary"
   type?:string
 }
 

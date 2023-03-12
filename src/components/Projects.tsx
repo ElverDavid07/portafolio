@@ -28,14 +28,24 @@ const Proyectos = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-7 ">
         {proyects.map(
-          ({ link, name, descripcion, github, web, ocultarIcon,type,color }, i) => (
+          (
+            { link, name, descripcion, github, web, ocultarIcon, type, color,githubId },
+            i
+          ) => (
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 1 }}
               key={i}
               className=" py-12 px-3 rounded-lg relative shadow-md shadow-indigo-600/20 dark:shadow-2xl dark:shadow-indigo-500/30"
             >
-              <Badge disableOutline isSquared enableShadow color={color} className="absolute top-0 right-1">
+              <Badge
+                disableOutline
+                isSquared
+                variant={"default"}
+                enableShadow
+                color={color}
+                className="absolute top-0 right-1"
+              >
                 {type}
               </Badge>
               <div className="relative">
@@ -54,6 +64,9 @@ const Proyectos = () => {
                 />
               </div>
               <Spacer y={1} />
+              <h2 className={`${josefin.className} flex dark:text-white justify-center text-lg mb-3`}>
+                {name}{" "}
+              </h2>
               <span className={`${josefin.className} dark:text-white`}>
                 {descripcion}{" "}
               </span>
@@ -66,6 +79,7 @@ const Proyectos = () => {
                   contentColor={theme === "light" ? "primary" : "secondary"}
                 >
                   <a
+                  id={githubId}
                     href={github}
                     aria-label="github"
                     target="_blank"

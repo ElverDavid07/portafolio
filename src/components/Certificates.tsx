@@ -29,7 +29,7 @@ const [loader, setLoader] = useState(false)
           ({ link, name, pdf, universidad, nombreDeElCertificado }, i) => (
             <div
               key={i}
-              className="border rounded-lg py-6 px-2 border-slate-200 dark:border-slate-700"
+              className="border rounded-lg py-5 px-4 border-slate-200 dark:border-slate-700"
             >
               <div className="flex flex-col justify-center relative">
               {!loader && (

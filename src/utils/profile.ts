@@ -1,4 +1,4 @@
-import {certificate,navbar,project,skill} from '@/interfaces/component'
+import { certificate, navbar, project, skill } from "@/interfaces/component";
 //abilidades
 export const skills: skill[] = [
   {
@@ -93,37 +93,36 @@ export const certificados: certificate[] = [
 //projectos
 export const proyects: project[] = [
   {
-    name: "apiNode",
+    name: "Api de gestion de usuarios",
     link: "/project/apiNode.png",
     descripcion:
-      "API de libros desarrollada usando node.js, express.js y mongodb atlas, esta API se encarga de proporcionar las funciones básicas de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de libros.",
-    github: "https://github.com/ElverDavid07/backendC4G3",
-    ocultarIcon:"icon1",
-    web:"#",
-    type:"avanzado",
-    color:"success"
-
+      "API de gestión de usuarios con validaciones, autenticación, protección de rutas, paginación, roles de usuario y encriptación de contraseñas. Implementado en Express, TypeScript y MongoDB, incluye un sistema de caché para optimizar el tiempo de respuesta.",
+    github: "https://github.com/ElverDavid07/user-management-api",
+    ocultarIcon: "icon1",
+    web: "#",
+    type: "avanzado",
+    color: "success",
   },
   {
-    name: "crud con react",
+    name: "crud con next.js",
     link: "/project/crud.png",
     descripcion:
-      "Aplicación contruida con next.js, que permite consumir la API de libros y brinda una experiencia de usuario amigable y fácil de usar. Los usuarios podrán realizar operaciones como  agregar, editar y eliminar libros. Sin terminar aun...",
+      "Aplicación contruida con next.js, que permite consumir una API de libros y poder realizar operaciones CRUD como  agregar, editar y eliminar libros",
     github: "https://github.com/ElverDavid07/crud-next",
-    web:"#",
-    ocultarIcon:"icon2",
-    type:"intermedio",
-    color:'warning'
+    web: "https://crud-next-two.vercel.app",
+    type: "intermedio",
+    color: "warning",
   },
   {
-    name: "usando api de rick y morty",
-    link: "/project/rickMorty.png",
+    name: "Dasboard",
+    link: "/project/dasboard.png",
     descripcion:
-      "aplicación web que consume la API de Rick and Morty para proporcionar información sobre los personajes, episodios y eventos de la serie. La interfaz de usuario está construida con React. ",
-    github: "https://github.com/ElverDavid07/RickAndMorty",
-    web: "https://rick-and-morty-kohl-one.vercel.app",
-    type:"basico",
-    color:"default"
+      "Estoy desarrollando un dashboard con Next.js que integra dos APIs: usuarios y productos. Este dashboard permitirá visualizar información relevante de ambas APIs en una sola plataforma",
+    ocultarIcon: "icon1",
+    githubId:"ocultarIconoDeGithub",
+    web: "#",
+    type: "En desarrollo",
+    color: "primary",
   },
 ];
 

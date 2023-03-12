@@ -8,3 +8,7 @@
 #icon2{
     @apply hidden
 }
+
+#ocultarIconoDeGithub{
+    @apply hidden
+}
