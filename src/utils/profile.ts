@@ -62,12 +62,12 @@ export const skills: skill[] = [
     link: "/icons/typescript.svg",
   },
 ];
-//certificados
+//*-----------certificados-----------
 export const certificados: certificate[] = [
   {
     name: "certificadoAll",
     link: "/certificates/certificadoAll.jpg",
-    pdf: "certificados/certificado.pdf",
+    pdf: "certificates/certificado.pdf",
     nombreDeElCertificado: "diplomado MisionTic 2022",
     universidad: "Universidad autonoma de bucaramanga",
     descripcion:
@@ -77,7 +77,7 @@ export const certificados: certificate[] = [
     name: "certificado4",
     link: "/certificates/certificadoC4.jpg",
     nombreDeElCertificado: "desarrollo de aplicaciones web",
-    pdf: "certificados/certificadoC4.pdf",
+    pdf: "certificates/certificadoC4.pdf",
     universidad: "Universidad autonoma de bucaramanga",
     descripcion: "curso realizado en la universidad autonoma de bucaramanga",
   },
@@ -90,7 +90,7 @@ export const certificados: certificate[] = [
     descripcion: "curso realizado en la univercidad sergio arboleda",
   },
 ];
-//projectos
+//*----------projectos------------
 export const proyects: project[] = [
   {
     name: "Api de gestion de usuarios",
