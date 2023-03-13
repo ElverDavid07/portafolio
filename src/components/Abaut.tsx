@@ -18,7 +18,7 @@ const Abaut = () => {
           <p
             className={`${josefin.className} text-slate-600 dark:text-indigo-50 lg:basis-96 basis-40 pt-2 text-center text-lg flex-wrap`}
           >
-            Desarrollador web de Back end y Front end Junior; he estudiado en la
+            Desarrollador web de Full stack Junior; he estudiado en la
             Universidad Sergio Arboleda y en la Universidad Autónoma de
             Bucaramanga. Actualmente, continúo mi formación de manera
             autodirigida, siempre buscando aprender nuevas tecnologías y
