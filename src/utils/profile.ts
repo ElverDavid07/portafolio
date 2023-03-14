@@ -110,8 +110,8 @@ export const proyects: project[] = [
       "Aplicación contruida con next.js, que permite consumir una API de libros y poder realizar operaciones CRUD como  agregar, editar y eliminar libros",
     github: "https://github.com/ElverDavid07/crud-next",
     web: "https://crud-next-two.vercel.app",
-    type: "intermedio",
-    color: "warning",
+    type: "basico",
+    color: "default",
   },
   {
     name: "Dasboard",
